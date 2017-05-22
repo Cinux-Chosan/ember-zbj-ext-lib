@@ -1,6 +1,6 @@
 {
   "name": "ember-zbj-ext-lib",
-  "version": "0.0.0",
+  "version": "0.0.1003",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -18,7 +18,9 @@
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^5.1.7"
+    "ember-cli-babel": "^5.1.7",
+    "ember-cli-htmlbars": "*",
+    "ember-cli-babel": "^5.1.5"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
