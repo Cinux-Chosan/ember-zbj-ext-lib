@@ -7,7 +7,6 @@ This README outlines the details of collaborating on this Ember addon.
 * `git clone <repository-url>` this repository
 * `cd ember-zbj-ext-lib`
 * `npm install`
-* `bower install`
 
 ## Running
 
