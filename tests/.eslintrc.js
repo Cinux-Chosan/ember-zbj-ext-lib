@@ -1,5 +1,21 @@
+// module.exports = {
+//   env: {
+//     embertest: true
+//   }
+// };
+
 module.exports = {
+  root: true,
+  parserOptions: {
+    ecmaVersion: 2017,
+    sourceType: 'module'
+  },
+  extends: 'eslint:recommended',
   env: {
-    embertest: true
+    browser: true,
+    es6: true
+  },
+  parser: 'babel-eslint',
+  rules: {
   }
 };
