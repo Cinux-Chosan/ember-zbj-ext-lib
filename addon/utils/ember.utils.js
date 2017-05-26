@@ -16,3 +16,4 @@ defProto(proto_array, symbol_findby2, {
 
 export let setP = setProto;
 export let findby2 = symbol_findby2;
+export let findby = findby2;
