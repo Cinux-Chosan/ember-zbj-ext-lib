@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import computed from 'ember-computed-decorators';
-import { genArray, symbol_findby2 } from 'ember-zbj-ext-lib';
+import { genArray, findby2 } from 'ember-zbj-ext-lib';
 
 export default Ember.Route.extend({
   number: genArray(1, 10),
@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   arr: [{id: 1, name: 'zhang'}],
   model() {
     let arr = this.get('arr');
-    console.log(arr[symbol_findby2]('id', '1'));
+    console.log(arr[findby2]('id', '1'));
     console.log(this.get('getN'));
     return null;
   }

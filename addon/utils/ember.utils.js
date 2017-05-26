@@ -7,7 +7,7 @@ let proto_array = getProto([]);
 
 defProto(proto_array, symbol_findby2, {
   get() {
-    return function(key, val) {
+    return (key, val) => {
       let iter = (key, val) => i => Ember.get(i, key) == val;
       return this.find(iter(key, val));
     }
