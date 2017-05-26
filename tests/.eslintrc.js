@@ -1,9 +1,3 @@
-// module.exports = {
-//   env: {
-//     embertest: true
-//   }
-// };
-
 module.exports = {
   root: true,
   parserOptions: {

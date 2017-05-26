@@ -4,12 +4,15 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
     // Add options here
+<<<<<<< HEAD
     babel: {
       optional: ['es7.decorators']
     },
     'ember-cli-babel': {
       includePolyfill: true
     }
+=======
+>>>>>>> 94e2a53107610b6952ba58362371141ef507edf4
   });
 
   /*
