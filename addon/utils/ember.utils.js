@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
-const { defineProperty: defProto, setPrototypeOf: setProto, getPrototypeOf: getProto } = Object;
+const { defineProperty: defProp, setPrototypeOf: setProto, getPrototypeOf: getProto } = Object;
 
 let symbol_findby2 = Symbol('findBy with ==, not ===');
 let proto_array = getProto([]);
 
-defProto(proto_array, symbol_findby2, {
+defProp(proto_array, symbol_findby2, {
   get() {
     return (key, val) => {
       let iter = (key, val) => i => Ember.get(i, key) == val;

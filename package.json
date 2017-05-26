@@ -1,7 +1,7 @@
 {
   "name": "ember-zbj-ext-lib",
   "version": "0.0.1005",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "individual extensions for ember",
   "keywords": [
     "ember-addon",
     "zbj"
