@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import computed from 'ember-computed-decorators';
-import { genArray, findby2 } from 'ember-zbj-ext-lib';
+import { genArray, findby2, removeBy } from 'ember-zbj-ext-lib';
 
 export default Ember.Route.extend({
   number: genArray(1, 10),
@@ -12,6 +12,9 @@ export default Ember.Route.extend({
     let arr = this.get('arr');
     console.log(arr[findby2]('id', '1'));
     console.log(this.get('getN'));
+    console.log(removeBy);
+    arr[removeBy]('id', 1);
+    console.log(arr);
     return null;
   }
 });
