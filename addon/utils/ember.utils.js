@@ -9,12 +9,12 @@ let symbol_findby2 = Symbol('findBy with ==, not ===');
 defProp(proto_array, symbol_findby2, {
   get() {
     return (key, val) => {
-      let iter = (key, val) => i => get(i, key) == val;
+      let iter = (key, val) => el => get(el, key) == val;
       return this.find(iter(key, val));
     }
   }
 });
-export let findby2 = symbol_findby2;
+export let findBy = findby2;
 export let findby = findby2;
 
 // 扩展 removeBy
@@ -25,7 +25,7 @@ defProp(proto_array, symbol_removeBy, {
       if (isEmber) {
         return this.removeObject(this[symbol_findby2](key, val));
       } else {
-        return this.splice(this.findIndex(e => e[key] == val), 1);
+        return this.splice(this.findIndex(el => el[key] == val), 1);
       }
     }
   }
