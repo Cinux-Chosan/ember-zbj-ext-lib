@@ -56,14 +56,14 @@ defProp(proto_array, symbol_typesof, {
 export let typesOf = symbol_typesof;
 
 // 该返回值能够正确处理Unicode字符, 解决JavaScript将大于\uFFFF的Unicode字符，算作两个字符的bug。
-let symbol_str_length = Symbol('return string length, Unicode friendly');
-defProp(proto_string, symbol_str_length, {
+let symbol_length = Symbol('return string length, Unicode friendly');
+defProp(proto_string, symbol_length, {
   get() {
     return Array.from(this).length;
   }
 })
 
-export let str_length = symbol_str_length;
+export let length = symbol_length;
 
 
 export let setP = setProto;
