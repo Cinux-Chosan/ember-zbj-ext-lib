@@ -46,7 +46,7 @@ defProp(proto_array, symbol_convertFalse, {
 export let convertFalse = symbol_convertFalse;
 
 // 返回数组中每一个元素的类型
-let symbol_typesof = Symbol('return all types of elements');
+let symbol_typesof = Symbol('return all types of array elements');
 defProp(proto_array, symbol_typesof, {
   get() {
     return Array.from(this, el => typeof el);
@@ -67,3 +67,4 @@ export let str_length = symbol_str_length;
 
 
 export let setP = setProto;
+export let setValue = set;
