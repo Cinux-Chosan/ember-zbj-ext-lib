@@ -1,4 +1,4 @@
-import { set, get, isEmber } from './__lib_utils__';
+import { set, get, isEmber, throwIfMissing } from './__lib_utils__';
 
 const { defineProperty: defProp, setPrototypeOf: setProto, getPrototypeOf: getProto } = Object;
 
