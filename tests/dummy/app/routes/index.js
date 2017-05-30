@@ -16,7 +16,7 @@ export default Ember.Route.extend({
     // arr[removeBy]('id', 1);
     console.log(arr[typesOf]);
     console.log('zhang建军'[str_length]);
-    arr[convertFalse]('');
+    arr[convertFalse](undefined);
     console.log(arr);
     return null;
   }

@@ -35,17 +35,17 @@ export let removeBy = symbol_removeBy;
 export let removeby = symbol_removeBy;
 
 
-// not finished
+// 转换值为 false 的元素为指定元素
 let symbol_convertFalse = Symbol('convert false to what you want');
 defProp(proto_array, symbol_convertFalse, {
   get() {
-    return dest => Array.from(this, el => el ? el : dest, this);
+    return dest => Array.from(this, (el, i) => this[i] = el ? el : dest);
   }
 });
 
 export let convertFalse = symbol_convertFalse;
 
-//
+// 返回数组中每一个元素的类型
 let symbol_typesof = Symbol('return all types of elements');
 defProp(proto_array, symbol_typesof, {
   get() {
@@ -55,7 +55,7 @@ defProp(proto_array, symbol_typesof, {
 
 export let typesOf = symbol_typesof;
 
-//
+// 该返回值能够正确处理Unicode字符, 解决JavaScript将大于\uFFFF的Unicode字符，算作两个字符的bug。
 let symbol_str_length = Symbol('return string length, Unicode friendly');
 defProp(proto_string, symbol_str_length, {
   get() {
