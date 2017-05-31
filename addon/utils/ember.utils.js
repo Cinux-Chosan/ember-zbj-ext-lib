@@ -39,7 +39,7 @@ export let removeby = symbol_removeBy;
 let symbol_convertFalse = Symbol('convert false to what you want');
 defProp(proto_array, symbol_convertFalse, {
   get() {
-    return dest => Array.from(this, (el, i) => this[i] = el ? el : dest);
+    return dest => Array.from(this, (el, i) => set(this, String(i), el ? el : dest ));
   }
 });
 
@@ -67,4 +67,3 @@ export let length = symbol_length;
 
 
 export let setP = setProto;
-export let setValue = set;
