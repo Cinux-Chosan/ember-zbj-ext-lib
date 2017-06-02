@@ -1,9 +1,5 @@
-import { set, get, isEmber, throwIfMissing } from './__lib_utils__';
+import { set, get, throwIfMissing, proto_array, proto_string, defProp, setProto } from './__lib_utils__';
 
-const { defineProperty: defProp, setPrototypeOf: setProto, getPrototypeOf: getProto } = Object;
-
-let proto_array = getProto([]);
-let proto_string = getProto('');
 
 // 扩展 findBy with ==
 let symbol_findBy = Symbol('findBy with ==, not ===');
@@ -23,7 +19,7 @@ let symbol_removeBy = Symbol('removeBy with ==, not ===');
 defProp(proto_array, symbol_removeBy, {
   get() {
     return (key, val) => {
-      if (isEmber) {
+      if (this.removeObject) {
         return this.removeObject(this[symbol_findBy](key, val));
       } else {
         return this.splice(this.findIndex(el => el[key] == val), 1);

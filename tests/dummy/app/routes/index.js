@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import computed from 'ember-computed-decorators';
-import { genArray, findby, removeBy, convertFalse, typesOf, length } from 'ember-zbj-ext-lib';
+import { genArray, findby, removeBy, convertFalse, typesOf, length, is } from 'ember-zbj-ext-lib';
 
 export default Ember.Route.extend({
   number: genArray(1, 10),
@@ -18,6 +18,10 @@ export default Ember.Route.extend({
     console.log('zhang建军'[length]);
     arr[convertFalse](undefined);
     console.log(arr);
+    let o1 = { name: 'zhangjianjun', b: undefined};
+    let o2 = { name: 'zhangjianjun', b: 0};
+    console.log(Object[is](o1, o2, 1));
+
     return null;
   }
 });
