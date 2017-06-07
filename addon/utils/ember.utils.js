@@ -59,6 +59,11 @@ defProp(proto_string, symbol_length, {
   }
 })
 
+defProp(proto_array, symbol_length, {
+  get() {
+    return this.length;
+  }
+})
 export let length = symbol_length;
 
 
