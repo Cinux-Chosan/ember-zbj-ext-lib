@@ -6,8 +6,8 @@ let symbol_findBy = Symbol('findBy with ==, not ===');
 defProp(proto_array, symbol_findBy, {
   get() {
     return (key = throwIfMissing('key'), val = throwIfMissing('val')) => {
-      let iter = (key, val) => el => get(el, key) == val;
-      return this.find(iter(key, val));
+      // let iter = (key, val) => el => get(el, key) == val;
+      return this.find(el => get(el, key) == val);
     }
   }
 });

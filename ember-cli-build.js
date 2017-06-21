@@ -6,8 +6,8 @@ module.exports = function(defaults) {
     // Add options here
     babel: {
       optional: ['es7.decorators'],
-      plugins: ["transform-decorators-legacy"],
-      presets: ["es2015", "stage-2"]
+      plugins: ["transform-decorators-legacy"],   // need dependencies: ["babel-plugin-transform-decorators-legacy"]
+      presets: ["es2015", "stage-2"]    // need dependencies: ["babel-preset-es2015", "babel-preset-stage-2"]
     },
     'ember-cli-babel': {
       includePolyfill: true

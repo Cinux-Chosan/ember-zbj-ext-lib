@@ -8,6 +8,6 @@ export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
     console.log(this.getAttr);
-    this.getAttr('on-load')();
+    // this.getAttr('on-load')();
   }
 });
